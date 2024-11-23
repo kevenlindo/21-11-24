@@ -1,78 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+/* Definir um esquema de cores com tema de sinuca */
 :root {
-    --bg-color: #222831;
-    --primary-color: #DDDDDD;
-    --secondary-color: #F05454;
-    --font: "Nunito Sans", sans-serif;
+    --primary-color: #006400; /* Verde escuro, para a mesa de sinuca */
+    --secondary-color: #dcdcdc; /* Cor clara para contrastar com o verde */
+    --bg-color: #f0f0f0; /* Fundo claro para ambiente mais suave */
+    --font: 'Arial', sans-serif; /* Fonte simples e legível */
+    --accent-color: #8B4513; /* Marrom, representando o taco de sinuca */
+    --highlight-color: #FF0000; /* Vermelho, para as bolas de sinuca */
 }
 
+/* Estilo geral da página */
 body {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
     font-family: var(--font);
-    height: 100vh;
+    background-color: var(--bg-color);
     margin: 0;
+    padding: 0;
+    color: var(--primary-color);
 }
 
 header {
     background-color: var(--primary-color);
+    padding: 20px;
+    color: white;
     text-align: center;
-    padding: 1px;
 }
 
-h1 {
-    font-size: 2rem;
-    color: var(--bg-color);
-    font-weight: 700;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 nav a {
+    color: white;
+    margin: 10px;
     text-decoration: none;
-    color: var(--bg-color);
-    margin: 0 2rem 1rem 0rem;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 nav a:hover {
     text-decoration: underline;
-    transform: scale(0.90);
-    transition: transform 0.1s;
+}
+
+/* Estilos para a área dos gráficos */
+.graficos-section {
+    padding: 20px;
+    text-align: center;
 }
 
 .graficos-container {
-    margin: 5rem;
-}
-
-.grafico {
-    margin-top: 3rem;
-}
-
-.graficos-container__texto {
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 2rem;
-    border: var(--secondary-color) solid 2px;
-}
-
-span {
-    font-weight: bold;
-    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 3rem;
-    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo para os gráficos */
+.grafico {
+    width: 80%;
+    height: 400px;
+    background-color: #e5e5e5; /* Cor de fundo suave */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para os textos e títulos do gráfico */
+.title {
+    font-size: 30px;
+    font-family: var(--font);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
 }
